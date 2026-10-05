@@ -1,0 +1,211 @@
+:root {
+    --bg: #040a1c;
+    --surface: #10182D;
+    --primary: hsl(225, 100%, 22%);
+    --accent: #714fbe;
+    --deep-blue: #280971;
+    --highlight: #22D3EE;
+    --text: #F8FAFC;
+    --muted: #94A3B8;
+    --radius-small: 10px;
+    --margin-sm: 10px;
+    --padding-sm: 30px;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.navbar {
+    background: linear-gradient(45deg, rgb(0, 0, 8), rgb(2, 2, 13), rgb(0, 0, 0));
+    width: 100%;
+    transition: all 0.4s ease-in-out;
+}
+
+.navbar a {
+    transition: all 0.5s ease-in-out;
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    transform: translateY(-5px);
+    text-decoration: underline dotted;
+    color: rgb(143, 110, 9);
+}
+
+.number {
+    cursor: pointer;
+}
+
+.book button {
+    transition: all 0.3s ease;
+    background-color: rgb(150, 97, 0);
+    color: white;
+}
+
+.book button:hover {
+    transform: translateY(-8px);
+    background-color: white;
+    color: rgb(130, 87, 0);
+}
+
+.main-page {
+    background-image: url(images/starry-sky-town.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    padding-top: 120px;
+}
+
+.main-page h1 {
+    font-size: 60px;
+}
+
+.expand {
+    transition: all 0.4s ease-in-out;
+}
+
+.expand:hover {
+    transform: scale(1.15);
+}
+
+.learn {
+    transition: all 0.5s ease;
+    background-color: #040a1c;
+}
+
+.learn:hover {
+    transform: translate(15px);
+    background-color: rgb(126, 71, 3);
+}
+
+.booking-section {
+    position: relative;
+    bottom: 130px;
+}
+
+.booking-box {
+    background-color: var(--bg);
+}
+
+.booking-field {
+    flex: 1;
+}
+
+.about button {
+    background: var(--bg);
+}
+
+.about {
+    color: var(--bg);
+}
+
+.about img {
+    border-radius: 10px;
+}
+
+.about img:hover {
+    filter: brightness(2);
+    transition: 5s all ease;
+}
+
+.aria {
+    font-family: Arial;
+}
+
+.news {
+    font-size: 18px;
+}
+
+.comfort {
+    word-spacing: 10px;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid rgb(253, 253, 254);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.small-cards {
+    border-left: 2px solid rgb(253, 253, 253);
+    padding: 20px;
+}
+
+.amenities {
+    background: var(--bg);
+}
+
+.image {
+    width: 200px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.testimonial-img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.ready {
+    background: var(--bg);
+    background-image: url(images/starry-sky-town.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    padding: 60px 0;
+}
+
+.footer li {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+    .main-page h1 {
+        font-size: 40px;
+    }
+
+    .booking-section {
+        bottom: 50px;
+    }
+
+    .booking-box {
+        padding: 25px !important;
+    }
+
+    .search-btn {
+        width: 100% !important;
+    }
+
+    .main-page .expand {
+        width: 50% !important;
+    }
+
+    .image {
+        width: 100%;
+        height: 180px;
+    }
+
+    .small-cards {
+        border-left: none;
+        border-bottom: 2px solid rgb(253, 253, 253);
+    }
+}
