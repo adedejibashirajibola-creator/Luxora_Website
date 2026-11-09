@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root { --dark: #080d1c; --gold: #c5a46d; --text: #667085; }
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark); }
+html { scroll-behavior: smooth; }
+
+.lux-navbar { background: var(--dark); padding: 18px 0; }
+.navbar-brand { color: white; font-size: 27px; font-weight: 800; letter-spacing: 3px; }
+.navbar-brand span { display: block; color: var(--gold); font-size: 9px; letter-spacing: 4px; text-align: center; }
+.lux-navbar .nav-link { color: #ddd; font-size: 13px; margin: 0 8px; }
+.lux-navbar .nav-link:hover, .lux-navbar .nav-link.active { color: var(--gold); }
+.navbar-toggler { color: white; border: 1px solid var(--gold); font-size: 25px; }
+.nav-book, .gold-btn { display: inline-block; background: var(--gold); color: var(--dark); padding: 15px 23px; text-decoration: none; font-size: 12px; font-weight: 800; }
+.nav-book:hover, .gold-btn:hover { background: white; color: var(--dark); }
+
+.eyebrow { color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: 3px; }
+.contact-hero { min-height: 480px; display: flex; align-items: center; padding: 90px 0; color: white; background: linear-gradient(90deg, #080d1ce8, #080d1c50), url('images/starry-sky-town.jpg') center/cover; }
+.contact-hero h1 { font-size: clamp(42px, 6vw, 68px); font-weight: 800; line-height: 1.2; margin: 20px 0; }
+.contact-hero h1 span { color: var(--gold); }
+.contact-hero .container > p:last-child { color: #ddd; font-size: 14px; }
+
+.contact-section { padding: 100px 0; }
+.contact-heading { text-align: center; margin-bottom: 55px; }
+.contact-heading h2 { font-size: clamp(30px, 4vw, 45px); font-weight: 800; margin-top: 15px; }
+.contact-heading h2 span, .location-box h2 span { color: var(--gold); }
+
+.contact-info { background: var(--dark); color: white; padding: 40px; height: 100%; }
+.contact-info h3, .contact-form h3 { font-size: 24px; font-weight: 800; }
+.contact-info > p, .contact-form > p { color: var(--text); font-size: 13px; line-height: 1.8; margin: 12px 0 30px; }
+.contact-detail { display: flex; align-items: flex-start; gap: 18px; margin: 25px 0; }
+.contact-detail > i { color: var(--gold); font-size: 23px; }
+.contact-detail h4 { font-size: 13px; font-weight: 800; }
+.contact-detail a, .contact-detail p { color: #b8becb; font-size: 12px; text-decoration: none; margin: 0; }
+.whatsapp-link { display: inline-block; margin-top: 15px; padding: 14px 20px; background: #188c57; color: white; text-decoration: none; font-size: 12px; font-weight: 700; }
+
+.contact-form { padding: 40px; border: 1px solid #eee; }
+.contact-form label { display: block; font-size: 11px; font-weight: 700; margin-bottom: 9px; }
+.contact-form input, .contact-form textarea { width: 100%; padding: 14px; border: 1px solid #e5e5e5; background: #fafafa; outline: none; font-size: 12px; font-family: inherit; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: var(--gold); }
+.send-message { background: var(--dark); color: white; border: none; padding: 16px 25px; font-size: 12px; font-weight: 800; transition: .3s; }
+.send-message:hover { background: var(--gold); color: var(--dark); }
+
+.location-section { padding: 0 0 100px; }
+.location-box { background: #f8f7f4; padding: 45px; display: flex; justify-content: space-between; align-items: center; gap: 25px; }
+.location-box h2 { font-size: 35px; font-weight: 800; margin: 12px 0; }
+.location-box p:not(.eyebrow) { color: var(--text); font-size: 13px; }
+
+.lux-footer { background: #080b15; color: white; padding: 75px 0 20px; }
+.footer-brand { color: white; font-size: 30px; font-weight: 800; letter-spacing: 4px; text-decoration: none; }
+.footer-tagline { color: var(--gold); font-size: 9px; letter-spacing: 4px; margin-top: 5px; }
+.lux-footer .row p { color: #9da3b0; font-size: 12px; line-height: 1.9; }
+.lux-footer h4 { font-size: 14px; margin-bottom: 25px; }
+.lux-footer .row a:not(.footer-brand) { display: block; color: #9da3b0; font-size: 12px; text-decoration: none; margin-bottom: 15px; }
+.lux-footer a:hover { color: var(--gold) !important; }
+.footer-socials { display: flex; gap: 15px; }
+.footer-socials a { color: white; font-size: 20px; }
+.footer-bottom { border-top: 1px solid #252a36; margin-top: 45px; padding-top: 25px; display: flex; justify-content: space-between; gap: 15px; }
+.footer-bottom p { color: #858b98; font-size: 11px; }
+
+@media(max-width: 991px) { .nav-book { margin-top: 15px; } }
+@media(max-width: 767px) { .contact-info, .contact-form { padding: 27px 22px; } .location-box { flex-direction: column; align-items: flex-start; } }
+@media(max-width: 576px) { .contact-section { padding: 70px 0; } .footer-bottom { flex-direction: column; } }

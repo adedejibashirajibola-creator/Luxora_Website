@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Your Stay | LUXORA Hotel & Resort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg lux-navbar">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">LUXORA<span>HOME AND RESORT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="amenities.html" class="nav-link">Amenities</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="nav-book active">Book Now <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+    </div>
+</nav>
+
+<header class="booking-hero">
+    <div class="container">
+        <p class="eyebrow">YOUR JOURNEY BEGINS HERE</p>
+        <h1>Let's Find Your<br><span>Perfect Stay.</span></h1>
+        <p>Choose your preferred accommodation and plan your experience at LUXORA.</p>
+    </div>
+</header>
+
+<section class="booking-section">
+    <div class="container">
+        <div class="booking-heading">
+            <p class="eyebrow">MAKE A RESERVATION</p>
+            <h2>Plan Your <span>Stay.</span></h2>
+            <p>Tell us about your visit by completing the details below.</p>
+        </div>
+
+        <div class="booking-layout">
+            <form class="booking-form">
+                <h3>Stay Information</h3>
+
+                <div class="row g-4">
+                    <div class="col-md-6">
+                        <label for="checkin">Check-in Date</label>
+                        <input type="date" id="checkin" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="checkout">Check-out Date</label>
+                        <input type="date" id="checkout" required>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="guests">Number of Guests</label>
+                        <select id="guests">
+                            <option value="1">1 Guest</option>
+                            <option value="2" selected>2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5+ Guests</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-6">
+                        <label for="roomType">Choose Your Room</label>
+                        <select id="roomType" required>
+                            <option value="">Select a room</option>
+                            <option value="standard">Standard Room - ₦35,000/night</option>
+                            <option value="deluxe">Deluxe Room - ₦50,000/night</option>
+                            <option value="executive">Executive Suite - ₦80,000/night</option>
+                        </select>
+                    </div>
+
+                    <div class="col-12">
+                        <label for="bookingRequests">Special Requests</label>
+                        <textarea id="bookingRequests" rows="4" placeholder="Tell us about any special requirements..."></textarea>
+                    </div>
+
+                    <div class="col-12">
+                        <a href="reservation.html" class="booking-submit">Continue To Reservation <i class="bi bi-arrow-right"></i></a>
+                    </div>
+                </div>
+            </form>
+
+            <aside class="booking-aside">
+                <div class="booking-aside-image">
+                    <img src="images/deluxe.jpg" alt="LUXORA luxury room">
+                </div>
+                <div class="booking-aside-content">
+                    <p class="eyebrow">THE LUXORA PROMISE</p>
+                    <h3>A Stay Worth Remembering.</h3>
+                    <p>Enjoy a comfortable environment, thoughtful facilities and welcoming hospitality.</p>
+                    <ul>
+                        <li><i class="bi bi-check-circle-fill"></i> Comfortable accommodation</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Quality guest experience</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Attentive hospitality</li>
+                        <li><i class="bi bi-check-circle-fill"></i> Memorable moments</li>
+                    </ul>
+                    <a href="rooms.html">Explore Our Rooms <i class="bi bi-arrow-up-right"></i></a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</section>
+
+<section class="booking-help">
+    <div class="container">
+        <p>Need assistance with your booking?</p>
+        <a href="contact.html">Contact Our Team <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+</section>
+
+<footer class="lux-footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <a href="index.html" class="footer-brand">LUXORA</a>
+                <p class="footer-tagline">HOME AND RESORT</p>
+                <p>Experience comfort, elegance and warm hospitality. Your home away from home.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="about.html">About</a><a href="amenities.html">Amenities</a>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Discover</h4>
+                <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="booking.html">Booking</a><a href="reservation.html">Reservations</a>
+            </div>
+            <div class="col-lg-4">
+                <h4>Contact</h4>
+                <p>+234 912 277 7884</p><p>info@luxora.com</p>
+                <div class="footer-socials"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 LUXORA Hotel & Resort. All rights reserved.</p><p>Designed for comfort. Created for memories.</p></div>
+    </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

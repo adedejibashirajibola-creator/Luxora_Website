@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation | LUXORA Hotel & Resort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="reservation.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg lux-navbar">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">LUXORA<span>HOME AND RESORT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="amenities.html" class="nav-link">Amenities</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="nav-book">Book Now</a>
+        </div>
+    </div>
+</nav>
+
+<header class="reservation-hero">
+    <div class="container">
+        <p class="eyebrow">ALMOST THERE</p>
+        <h1>Complete Your<br><span>Reservation.</span></h1>
+        <p>Review your stay details and provide your guest information.</p>
+    </div>
+</header>
+
+<section class="reservation-section">
+    <div class="container">
+        <div class="reservation-heading">
+            <p class="eyebrow">RESERVATION DETAILS</p>
+            <h2>Your Stay, <span>Your Way.</span></h2>
+            <p>Complete the details below to proceed with your reservation request.</p>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-7">
+                <form class="guest-form">
+                    <h3>Guest Information</h3>
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="firstName">First Name</label>
+                            <input type="text" id="firstName" placeholder="First name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="lastName">Last Name</label>
+                            <input type="text" id="lastName" placeholder="Last name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="guestEmail">Email Address</label>
+                            <input type="email" id="guestEmail" placeholder="Email address" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="guestPhone">Phone Number</label>
+                            <input type="tel" id="guestPhone" placeholder="+234" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="guestAddress">Address</label>
+                            <input type="text" id="guestAddress" placeholder="Your address">
+                        </div>
+
+                        <div class="col-12">
+                            <label for="guestNotes">Additional Information</label>
+                            <textarea id="guestNotes" rows="4" placeholder="Anything else we should know?"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="reservation-policy">
+                        <i class="bi bi-info-circle"></i>
+                        <p>Reservation requests are subject to availability and confirmation by the hotel.</p>
+                    </div>
+
+                    <button type="submit" class="confirm-reservation">
+                        Submit Reservation Request <i class="bi bi-arrow-right"></i>
+                    </button>
+                    <p id="displayMessage" aria-live="polite"></p>
+                </form>
+            </div>
+
+            <div class="col-lg-5">
+                <aside class="reservation-summary">
+                    <div class="summary-top">
+                        <p class="eyebrow">YOUR BOOKING</p>
+                        <h3>Reservation Summary</h3>
+                    </div>
+
+                    <img src="images/deluxe.jpg" alt="Luxury hotel room">
+
+                    <div class="summary-content">
+                        <h4>Selected Accommodation</h4>
+                        <p>Room selection will appear here.</p>
+
+                        <div class="summary-row"><span>Check-in</span><strong>Not selected</strong></div>
+                        <div class="summary-row"><span>Check-out</span><strong>Not selected</strong></div>
+                        <div class="summary-row"><span>Guests</span><strong>Not selected</strong></div>
+                        <div class="summary-row"><span>Duration</span><strong>To be calculated</strong></div>
+
+                        <div class="summary-total">
+                            <span>Estimated Total</span>
+                            <strong>₦0</strong>
+                        </div>
+
+                        <p class="summary-note">Your final booking details and price will be confirmed by the hotel.</p>
+                    </div>
+                </aside>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="reservation-help">
+    <div class="container">
+        <h2>Need Help With Your Reservation?</h2>
+        <p>Our team is available to assist with your enquiries.</p>
+        <a href="contact.html">Contact Us <i class="bi bi-arrow-up-right"></i></a>
+    </div>
+</section>
+
+<footer class="lux-footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <a href="index.html" class="footer-brand">LUXORA</a>
+                <p class="footer-tagline">HOME AND RESORT</p>
+                <p>Experience comfort, elegance and warm hospitality. Your home away from home.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="about.html">About</a><a href="amenities.html">Amenities</a>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Discover</h4>
+                <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="booking.html">Booking</a><a href="reservation.html">Reservations</a>
+            </div>
+            <div class="col-lg-4">
+                <h4>Contact</h4>
+                <p>+234 912 277 7884</p><p>info@luxora.com</p>
+                <div class="footer-socials"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 LUXORA Hotel & Resort. All rights reserved.</p><p>Designed for comfort. Created for memories.</p></div>
+    </div>
+</footer>
+
+<script src="reservation.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

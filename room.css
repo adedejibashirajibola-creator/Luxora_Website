@@ -1,54 +1,357 @@
-/* LUXORA HOTEL & RESORT — HOMEPAGE STYLES */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
 :root {
-    --navy: #040a1c;
-    --navy-soft: #10182d;
-    --gold: #c69a45;
-    --gold-dark: #a87927;
-    --ink: #182033;
-    --muted: #6f7888;
-    --paper: #f7f7f5;
-    --white: #fff;
-    --serif: "Playfair Display", Georgia, serif;
-    --sans: "Inter", Arial, sans-serif;
+    --dark: #080d1c;
+    --gold: #c5a46d;
+    --white: #ffffff;
+    --text: #667085;
 }
 
-* { box-sizing: border-box; }
-html { scroll-behavior: smooth; scroll-padding-top: 90px; }
-body { margin: 0; color: var(--ink); font-family: var(--sans); background: var(--white); }
-img { max-width: 100%; display: block; }
-a { text-decoration: none; }
-.section { padding: 105px 0; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    color: var(--dark);
+}
 
-.navbar { padding: 18px 0; background: transparent; transition: background .3s ease, padding .3s ease, box-shadow .3s ease; }
-.navbar.scrolled { background: rgba(4,10,28,.97); padding: 11px 0; box-shadow: 0 8px 30px rgba(0,0,0,.15); }
-.brand { display: flex; flex-direction: column; line-height: 1; margin-right: 30px; }
-.brand-name, .footer-brand { color: var(--white); font-family: var(--serif); font-size: 27px; font-weight: 700; letter-spacing: 2px; }
-.brand-tagline { color: #d8bd87; font-size: 8px; letter-spacing: 3px; margin-top: 6px; }
-.navbar .nav-link { color: rgba(255,255,255,.88); font-size: 12px; font-weight: 600; margin: 0 8px; transition: color .25s ease; }
-.navbar .nav-link:hover, .navbar .nav-link.active { color: #e2bd77; }
-.nav-actions { display: flex; align-items: center; gap: 18px; }
-.nav-phone { color: white; font-size: 12px; white-space: nowrap; }
-.nav-phone i { color: var(--gold); margin-right: 5px; }
-.btn-gold { background: var(--gold); border: 1px solid var(--gold); color: #fff; font-weight: 700; border-radius: 3px; padding: 13px 22px; transition: .25s ease; }
-.btn-gold:hover { background: #fff; border-color: #fff; color: var(--navy); transform: translateY(-2px); }
-.nav-book { padding: 10px 17px; font-size: 12px; }
-.main-page { margin-top: 50px; display: flex; flex-direction: column; align-items: center; justify-content: center; background-image: url(images/executive.jpg); background-position: center; background-repeat: no-repeat; background-size: cover; min-height: 100vh; }
+/* NAVBAR */
 
+.luxora-navbar {
+    background: var(--dark);
+    padding: 18px 0;
+}
 
-/* hero section */
-.hero { min-height: 790px; height: 100vh; max-height: 980px; position: relative; display: flex; align-items: center; overflow: hidden; color: white; background: var(--navy) url("images/starry-sky-town.jpg") center/cover no-repeat; animation: heroZoom 24s ease-in-out infinite alternate; }
-.hero-overlay { position: absolute; inset: 0; background: linear-gradient(90deg, rgba(4,10,28,.94) 0%, rgba(4,10,28,.72) 46%, rgba(4,10,28,.18) 100%), linear-gradient(0deg, rgba(4,10,28,.4), transparent 50%); }
-.hero-container { position: relative; z-index: 1; padding-top: 75px; }
-.hero-content { max-width: 720px; }
-.hero h6 { color: var(--gold); font-size: clamp(20px, 3.5vh, 15px); letter-spacing: 10px; }
-.hero h1 { font-family: var(--serif); font-size: clamp(48px, 6.5vw, 82px); font-weight: 600; }
-.hero h1 em { color: var(--gold); font-weight: 500; }
-@keyframes heroZoom {
-    from {
-        background-size: 100% 100%;
+.navbar-brand {
+    color: var(--white);
+    font-size: 27px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.navbar-brand span {
+    display: block;
+    color: var(--gold);
+    font-size: 9px;
+    letter-spacing: 4px;
+    text-align: center;
+}
+
+.luxora-navbar .nav-link {
+    color: #d6d6d6;
+    font-size: 13px;
+    margin: 0 9px;
+    transition: color 0.3s ease;
+}
+
+.luxora-navbar .nav-link:hover,
+.luxora-navbar .nav-link.active {
+    color: var(--gold);
+}
+
+.nav-book-btn {
+    background: var(--gold);
+    color: var(--dark);
+    padding: 13px 22px;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.nav-book-btn:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+
+.navbar-toggler {
+    color: var(--white);
+    border: 1px solid var(--gold);
+    font-size: 25px;
+}
+
+/* HERO SECTION */
+
+.rooms-hero {
+    min-height: 650px;
+    background: linear-gradient(
+        90deg,
+        rgba(8, 13, 28, 0.88),
+        rgba(8, 13, 28, 0.25)
+    ), url('images/deluxe.jpg') center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    padding: 100px 9%;
+    color: var(--white);
+}
+
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content > p:first-child {
+    color: var(--gold);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 {
+    font-size: clamp(42px, 6vw, 75px);
+    font-weight: 800;
+    line-height: 1.15;
+    margin-bottom: 25px;
+}
+
+.hero-content h1 span {
+    color: var(--gold);
+}
+
+.hero-description {
+    max-width: 490px;
+    color: #e0e0e0;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 35px;
+}
+
+.hero-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 15px;
+    padding: 16px 25px;
+    background: var(--gold);
+    color: var(--dark);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.hero-btn:hover {
+    background: var(--white);
+    color: var(--dark);
+}
+
+@media (max-width: 991px) {
+    .nav-book-btn {
+        display: inline-block;
+        margin-top: 15px;
     }
-    to {
-        background-size: 110% 110%;
+
+    .luxora-navbar .nav-link {
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 576px) {
+    .rooms-hero {
+        min-height: 570px;
+        padding: 80px 7%;
+    }
+
+    .hero-content h1 {
+        font-size: 43px;
+    }
+}
+
+/* ROOM COLLECTION */
+
+.room-collection {
+    padding: 110px 0;
+    background: #f8f7f4;
+}
+
+.room-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 40px;
+    margin-bottom: 55px;
+}
+
+.room-eyebrow {
+    color: var(--gold);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 3px;
+}
+
+.room-heading h2 {
+    font-size: clamp(35px, 5vw, 50px);
+    font-weight: 800;
+}
+
+.room-heading h2 span {
+    color: var(--gold);
+}
+
+.room-intro {
+    max-width: 420px;
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 14px;
+}
+
+/* ROOM CARDS */
+
+.lux-room-card {
+    height: 100%;
+    background: white;
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.lux-room-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.12);
+}
+
+.lux-room-image {
+    height: 280px;
+    position: relative;
+    overflow: hidden;
+}
+
+.lux-room-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(
+        to top,
+        rgba(8, 13, 28, 0.5),
+        transparent 65%
+    );
+    pointer-events: none;
+}
+
+.lux-room-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+}
+
+.lux-room-card:hover .lux-room-image img {
+    transform: scale(1.08);
+}
+
+.room-label {
+    position: absolute;
+    top: 18px;
+    left: 18px;
+    z-index: 2;
+    background: var(--gold);
+    color: var(--dark);
+    padding: 9px 12px;
+    font-size: 9px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.room-number {
+    position: absolute;
+    bottom: 15px;
+    right: 20px;
+    z-index: 2;
+    color: white;
+    font-size: 35px;
+    font-weight: 800;
+}
+
+/* ROOM CARD CONTENT */
+
+.lux-room-body {
+    padding: 25px 22px;
+}
+
+.room-title-price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.room-title-price h3 {
+    font-size: 18px;
+    font-weight: 800;
+}
+
+.room-title-price p {
+    color: var(--gold);
+    font-weight: 800;
+    font-size: 14px;
+    white-space: nowrap;
+}
+
+.room-title-price small {
+    color: var(--text);
+    font-size: 10px;
+    font-weight: 400;
+}
+
+.room-details {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    padding: 15px 0;
+    margin-bottom: 18px;
+}
+
+.room-details span {
+    color: var(--text);
+    font-size: 10px;
+}
+
+.room-details i {
+    color: var(--gold);
+    margin-right: 3px;
+}
+
+.room-text {
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.8;
+    min-height: 48px;
+}
+
+.room-discover {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #eee;
+    padding-top: 18px;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--dark);
+    font-size: 12px;
+    font-weight: 800;
+    transition: color 0.3s ease;
+}
+
+.room-discover:hover {
+    color: var(--gold);
+}
+
+.room-discover i {
+    font-size: 18px;
+}
+
+@media (max-width: 767px) {
+    .room-heading {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 15px;
+    }
+
+    .room-collection {
+        padding: 75px 0;
     }
 }

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | LUXORA Hotel & Resort</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg lux-navbar">
+    <div class="container">
+        <a href="index.html" class="navbar-brand">LUXORA<span>HOME AND RESORT</span></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu"><i class="bi bi-list"></i></button>
+        <div class="collapse navbar-collapse" id="navMenu">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+                <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="amenities.html" class="nav-link">Amenities</a></li>
+                <li class="nav-item"><a href="gallery.html" class="nav-link">Gallery</a></li>
+                <li class="nav-item"><a href="contact.html" class="nav-link active">Contact</a></li>
+            </ul>
+            <a href="booking.html" class="nav-book">Book Now <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+    </div>
+</nav>
+
+<header class="contact-hero">
+    <div class="container">
+        <p class="eyebrow">LET'S CONNECT</p>
+        <h1>We'd Love To<br><span>Hear From You.</span></h1>
+        <p>Questions, enquiries or special requests? Our team is ready to assist.</p>
+    </div>
+</header>
+
+<section class="contact-section">
+    <div class="container">
+        <div class="contact-heading">
+            <p class="eyebrow">GET IN TOUCH</p>
+            <h2>Let's Start A <span>Conversation.</span></h2>
+        </div>
+
+        <div class="row g-5">
+            <div class="col-lg-5">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <p>Reach out to us through any of the channels below.</p>
+
+                    <div class="contact-detail">
+                        <i class="bi bi-telephone"></i>
+                        <div><h4>Phone</h4><a href="tel:+2349122777884">+234 912 277 7884</a></div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="bi bi-envelope"></i>
+                        <div><h4>Email</h4><a href="mailto:info@luxora.com">info@luxora.com</a></div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="bi bi-geo-alt"></i>
+                        <div><h4>Location</h4><p>Update with the hotel's actual address.</p></div>
+                    </div>
+
+                    <div class="contact-detail">
+                        <i class="bi bi-clock"></i>
+                        <div><h4>Availability</h4><p>Contact our team for assistance and enquiries.</p></div>
+                    </div>
+
+                    <a href="https://wa.me/2349122777884" class="whatsapp-link">
+                        <i class="bi bi-whatsapp"></i> Chat With Us
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-7">
+                <form class="contact-form">
+                    <h3>Send Us A Message</h3>
+                    <p>Fill in your details and tell us how we can help.</p>
+
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label for="contactName">Full Name</label>
+                            <input type="text" id="contactName" placeholder="Your name" required>
+                        </div>
+
+                        <div class="col-md-6">
+                            <label for="contactEmail">Email Address</label>
+                            <input type="email" id="contactEmail" placeholder="Your email" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactSubject">Subject</label>
+                            <input type="text" id="contactSubject" placeholder="How can we help?" required>
+                        </div>
+
+                        <div class="col-12">
+                            <label for="contactMessage">Your Message</label>
+                            <textarea id="contactMessage" rows="6" placeholder="Write your message..." required></textarea>
+                        </div>
+
+                        <div class="col-12 d-flex gap-3">
+                            <button type="button" class="send-message" onclick="sendMessage()">Send Message <i class="bi bi-arrow-right"></i></button>
+                            <p id="displayMessage"></p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="location-section">
+    <div class="container">
+        <div class="location-box">
+            <div>
+                <p class="eyebrow">FIND US</p>
+                <h2>Visit <span>LUXORA.</span></h2>
+                <p>Our actual hotel address and map location will be added here.</p>
+            </div>
+            <a href="booking.html" class="gold-btn">Plan Your Visit <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+    </div>
+</section>
+
+<footer class="lux-footer">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <a href="index.html" class="footer-brand">LUXORA</a>
+                <p class="footer-tagline">HOME AND RESORT</p>
+                <p>Experience comfort, elegance and warm hospitality. Your home away from home.</p>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Explore</h4>
+                <a href="index.html">Home</a><a href="rooms.html">Rooms</a><a href="about.html">About</a><a href="amenities.html">Amenities</a>
+            </div>
+            <div class="col-6 col-lg-2">
+                <h4>Discover</h4>
+                <a href="gallery.html">Gallery</a><a href="contact.html">Contact</a><a href="booking.html">Booking</a><a href="reservation.html">Reservations</a>
+            </div>
+            <div class="col-lg-4">
+                <h4>Contact</h4>
+                <p>+234 912 277 7884</p><p>info@luxora.com</p>
+                <div class="footer-socials"><a href="#"><i class="bi bi-instagram"></i></a><a href="#"><i class="bi bi-facebook"></i></a><a href="#"><i class="bi bi-whatsapp"></i></a></div>
+            </div>
+        </div>
+        <div class="footer-bottom"><p>© 2026 LUXORA Hotel & Resort. All rights reserved.</p><p>Designed for comfort. Created for memories.</p></div>
+    </div>
+</footer>
+
+<script src="contact.js"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

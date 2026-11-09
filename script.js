@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // Keep the navigation background visible after the visitor scrolls.
     function updateNavbar() {
         if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 35);
-    }
+    }   
     updateNavbar();
     window.addEventListener("scroll", updateNavbar, { passive: true });
 

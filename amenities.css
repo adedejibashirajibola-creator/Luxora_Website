@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --dark: #080d1c;
+    --gold: #c5a46d;
+    --text: #667085;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Plus Jakarta Sans', sans-serif; color: var(--dark); }
+html { scroll-behavior: smooth; }
+
+.lux-navbar { background: var(--dark); padding: 18px 0; }
+.navbar-brand { color: white; font-size: 27px; font-weight: 800; letter-spacing: 3px; }
+.navbar-brand span { display: block; color: var(--gold); font-size: 9px; letter-spacing: 4px; text-align: center; }
+.lux-navbar .nav-link { color: #ddd; font-size: 13px; margin: 0 8px; }
+.lux-navbar .nav-link:hover, .lux-navbar .nav-link.active { color: var(--gold); }
+.navbar-toggler { color: white; border: 1px solid var(--gold); font-size: 25px; }
+.nav-book, .gold-btn { display: inline-block; background: var(--gold); color: var(--dark); padding: 15px 23px; text-decoration: none; font-size: 12px; font-weight: 800; }
+.nav-book:hover, .gold-btn:hover { background: white; color: var(--dark); }
+
+.page-hero { min-height: 540px; display: flex; align-items: center; padding: 90px 0; color: white; background-position: center; background-size: cover; }
+.amenities-hero { background-image: linear-gradient(90deg, rgba(8,13,28,.9), rgba(8,13,28,.3)), url('images/restaurant-hall-with-leather-armchairs-french-windows.jpg'); }
+.eyebrow { color: var(--gold); font-size: 11px; font-weight: 800; letter-spacing: 3px; }
+.page-hero h1 { font-size: clamp(40px, 6vw, 68px); font-weight: 800; line-height: 1.2; margin: 20px 0; }
+.page-hero h1 span { color: var(--gold); }
+.page-hero .container > p:not(.eyebrow) { color: #ddd; max-width: 500px; line-height: 1.9; font-size: 14px; margin-bottom: 28px; }
+
+.facility-section { padding: 110px 0; }
+.section-heading { text-align: center; max-width: 700px; margin: 0 auto 55px; }
+.section-heading h2 { font-size: clamp(30px, 4vw, 46px); font-weight: 800; margin: 18px 0; }
+.section-heading h2 span { color: var(--gold); }
+.section-heading > p:last-child { color: var(--text); font-size: 14px; line-height: 1.8; }
+
+.facility-card { height: 100%; background: #f8f7f4; overflow: hidden; transition: .4s ease; }
+.facility-card:hover { transform: translateY(-8px); box-shadow: 0 18px 40px #00000012; }
+.facility-card img { width: 100%; height: 230px; object-fit: cover; transition: .5s ease; }
+.facility-card:hover img { transform: scale(1.05); }
+.facility-content { padding: 27px; }
+.facility-content i { color: var(--gold); font-size: 27px; }
+.facility-content h3 { font-size: 19px; font-weight: 800; margin: 15px 0 10px; }
+.facility-content p { color: var(--text); font-size: 13px; line-height: 1.8; margin: 0; }
+
+.facility-cta { padding: 100px 20px; text-align: center; background: var(--dark); color: white; }
+.facility-cta h2 { font-size: clamp(30px, 5vw, 48px); font-weight: 800; margin: 20px 0 30px; }
+
+.lux-footer { background: #080b15; color: white; padding: 75px 0 20px; }
+.footer-brand { color: white; font-size: 30px; font-weight: 800; letter-spacing: 4px; text-decoration: none; }
+.footer-tagline { color: var(--gold); font-size: 9px; letter-spacing: 4px; margin-top: 5px; }
+.lux-footer .row p { color: #9da3b0; font-size: 12px; line-height: 1.9; }
+.lux-footer h4 { font-size: 14px; margin-bottom: 25px; }
+.lux-footer .row a:not(.footer-brand) { display: block; color: #9da3b0; font-size: 12px; text-decoration: none; margin-bottom: 15px; }
+.lux-footer a:hover { color: var(--gold) !important; }
+.footer-socials { display: flex; gap: 15px; }
+.footer-socials a { color: white; font-size: 20px; }
+.footer-bottom { border-top: 1px solid #252a36; margin-top: 45px; padding-top: 25px; display: flex; justify-content: space-between; gap: 15px; }
+.footer-bottom p { color: #858b98; font-size: 11px; }
+
+@media(max-width: 991px) { .nav-book { margin-top: 15px; } }
+@media(max-width: 576px) { .page-hero { min-height: 470px; } .facility-section { padding: 75px 0; } .footer-bottom { flex-direction: column; } }
