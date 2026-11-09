@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Experience comfort, elegance and warm hospitality at LUXORA Hotel & Resort.">
+    <title>LUXORA Hotel & Resort | Luxury, Comfort & Memories</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link rel="stylesheet" href="room.css">
+</head>
+<body>
+
+    
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="siteNavbar">
+    <div class="container">
+        <a class="navbar-brand brand" href="index.html">
+            <span class="brand-name">LUXORA</span>
+            <span class="brand-tagline">HOTEL &amp; RESORT</span>
+        </a>
+
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a class="nav-phone" href="tel:+2349122777884"><i class="bi bi-telephone"></i> +234 912 277 7884</a>
+                <a class="btn btn-gold nav-book" href="#bookingBox">Book Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+        <div class="hero-content reveal">
+    <h6 class="fw-bold text-left">OUR ROOMS</h6>
+    <h1 class="text-left fw-bold fs-1 m-2">Comfortable Stays, <br> <em>Unforgettable Moments</em></h1>
+    <p class="text-left hero-description">Choose from our well-appointed rooms and suites,<br> designed to give you the perfect blend of the comfort, style and luxury.</p>
+
+        </div>
+        <a href="#about" class="scroll-cue"><span></span> SCROLL TO DISCOVER</a>
+    </div>
+</main>
+
+<section class="roomTypes mt-5">
+<div class="container">
+    <div class="row">
+    <div class="col-lg-6 col-12">
+        <div>
+            <h6 class="fw-bold">OUR ROOMS</h6>
+            <h1 class="fw-bold">Room Types</h1>
+        </div>
+    </div>
+    <div class="col-lg-6 col-12">
+        <div>
+            <p class="fs-5">
+                Whether you're here for business, a getaway or a special occasion,
+                we have the perfect room for you. Each room is designed with
+                your comfort and relaxation in mind.
+            </p>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<section>
+    <div class="container">
+         <div class="row g-4 rooms mb-3">
+            <div class="col-12 col-md-4 col-6">
+                <div class="card h-100 bg-white shadow-sm">
+                    <img src="images/starry-sky-town.jpg" class="card-img-top" alt="Standard Room" loading="lazy">
+                    <div class="card-body">
+                        <div class="textRows">
+                            <h6 class="card-title fw-bold" id="standardName">Standard Room</h6>
+                        <h5 class="card-text" id="standardPrice"><strong>₦35,000</strong> /night</h5>
+                        </div>
+
+                        <div class="d-flex symbols align-items-center">
+                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
+                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i>2 Guests</div>
+                            <div class="mb-3"><i class="bi bi-snow text-dark"></i>25 m</div>
+                        </div>
+
+                        <div>
+                            <p>A cozy and stylish room with modern
+amenities, perfect for solo travelers or couples.</p>
+                        </div>
+
+                        <button class="btn w-100 text-white learn rounded-pill" id="standard" onclick="exploreButton(this)">Explore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-6">
+                <div class="card h-100 bg-white shadow-sm">
+                    <img src="images/deluxe.jpg" class="card-img-top" alt="Deluxe Room" loading="lazy">
+                    <div class="card-body">
+                        <div class="textRows">
+                            <h6 class="card-title fw-bold" id="deluxeName">Deluxe Room</h6>
+                        <h5 class="card-text" id="deluxePrice"><strong>₦50,000</strong> /night</h5>
+                        </div>
+
+                        <div class="d-flex symbols align-items-center">
+                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
+                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i>2 Guests</div>
+                            <div class="mb-3"><i class="bi bi-binoculars-fill text-dark"></i>35 m</div>
+                        </div>
+
+                        <div>
+                            <p>
+                                More space, more comfort. Our Deluxe Room
+                                offers extra room to relax and unwind.
+</p>
+                        </div>
+
+                        <button class="btn w-100 text-white learn rounded-pill" id="deluxe" onclick="exploreButton(this)">Explore</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12 col-md-4 col-6">
+                <div class="card h-100 bg-white shadow-sm">
+                    <img src="images/executive.jpg" class="card-img-top" alt="Executive Suite" loading="lazy">
+                    <div class="card-body">
+                        <div class="textRows">
+                            <h6 class="card-title fw-bold" id="executiveName">Executive Suite</h6>
+                        <h5 class="card-text" id="executivePrice"><strong>₦80,000</strong> /night</h5>
+                        </div>
+
+                        <div class="d-flex symbols align-items-center">
+                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
+                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i>4 Guests</div>
+                            <div class="mb-3"><i class="bi bi-house-door-fill text-dark"></i>60 m</div>
+                        </div>
+
+                        <div>
+                            <p>
+                                Experience the ultimate luxury with a seperate living area, premium amenities and stunning views.
+</p>
+                        </div>
+
+
+                        <button class="btn w-100 text-white learn rounded-pill" id="executive" onclick="exploreButton(this)">Explore</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  </body>
+</html>

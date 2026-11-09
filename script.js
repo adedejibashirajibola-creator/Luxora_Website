@@ -1,64 +1,109 @@
-const roomType = document.getElementById("roomType");
-const travellers = document.getElementById("travelers");
-const checkin = document.getElementById("checkin");
-const checkout = document.getElementById("checkout");
-const bookingBox = document.getElementById("bookingBox");
+// LUXORA homepage interactions
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.getElementById("siteNavbar");
+    const bookingForm = document.getElementById("bookingBox");
+    const checkin = document.getElementById("checkin");
+    const checkout = document.getElementById("checkout");
+    const roomType = document.getElementById("roomType");
+    const bookingMessage = document.getElementById("bookingMessage");
+    const currentYear = document.getElementById("currentYear");
 
-bookingBox.addEventListener("submit", function(event) {
-    event.preventDefault();
+    // Keep the navigation background visible after the visitor scrolls.
+    function updateNavbar() {
+        if (navbar) navbar.classList.toggle("scrolled", window.scrollY > 35);
+    }
+    updateNavbar();
+    window.addEventListener("scroll", updateNavbar, { passive: true });
 
-    const checkInValue = checkin.value;
-    const checkOutValue = checkout.value;
-    const roomTypeValue = roomType.value;
-    const travellersValue = travellers.value;
+    // Set today's date as the earliest selectable check-in date.
+    const today = new Date();
+    const localToday = new Date(today.getTime() - today.getTimezoneOffset() * 60000)
+        .toISOString().split("T")[0];
 
-    if (!checkInValue || !checkOutValue) {
-        alert("Date Missing");
-    } else {
-        const checkInDate = new Date(checkInValue);
-        const checkOutDate = new Date(checkOutValue);
+    if (checkin) {
+        checkin.min = localToday;
+        checkin.addEventListener("change", function () {
+            if (checkout) {
+                checkout.min = checkin.value || localToday;
+                if (checkout.value && checkout.value <= checkin.value) {
+                    checkout.value = "";
+                }
+            }
+        });
+    }
+    if (checkout) checkout.min = localToday;
 
-        if (checkInDate < checkOutDate) {
-            let roomPrice;
+    // This is an estimate only; it does not create a real reservation.
+    if (bookingForm) {
+        bookingForm.addEventListener("submit", function (event) {
+            event.preventDefault();
 
-            if (roomTypeValue === "Standard Room") {
-                roomPrice = 35000;
-            } else if (roomTypeValue === "Deluxe Room") {
-                roomPrice = 50000;
-            } else if (roomTypeValue === "Executive Suite") {
-                roomPrice = 80000;
+            const start = new Date(checkin.value + "T00:00:00");
+            const end = new Date(checkout.value + "T00:00:00");
+
+            if (!checkin.value || !checkout.value) {
+                bookingMessage.textContent = "Please select both your check-in and check-out dates.";
+                bookingMessage.style.color = "#a13b32";
+                return;
             }
 
-            const difference = checkOutDate - checkInDate;
-            const nights = difference / (1000 * 60 * 60 * 24);
-            const totalPrice = roomPrice * nights;
+            const nights = Math.round((end - start) / 86400000);
+            if (!Number.isFinite(nights) || nights <= 0) {
+                bookingMessage.textContent = "Your check-out date must be later than your check-in date.";
+                bookingMessage.style.color = "#a13b32";
+                return;
+            }
 
-            alert(`Room: ${roomTypeValue}
-Guests: ${travellersValue}
-Nights: ${nights}
-Total: ₦${totalPrice}`);
-        } else {
-            alert("Invalid Booking");
-        }
+            const prices = {
+                standard: 35000,
+                deluxe: 50000,
+                executive: 80000
+            };
+
+            const selectedRoom = roomType.value;
+            const total = prices[selectedRoom] * nights;
+            const formattedTotal = new Intl.NumberFormat("en-NG", {
+                style: "currency",
+                currency: "NGN",
+                maximumFractionDigits: 0
+            }).format(total);
+
+            bookingMessage.style.color = "#345b3b";
+            bookingMessage.textContent = "Estimated stay: " + nights + " night(s) · " + formattedTotal +
+                ". This is an estimate, not a confirmed reservation.";
+        });
     }
+
+    // Reveal content as it enters the viewport.
+    const revealItems = document.querySelectorAll(".reveal");
+    if ("IntersectionObserver" in window) {
+        const observer = new IntersectionObserver(function (entries, currentObserver) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    currentObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.12 });
+
+        revealItems.forEach(function (item) {
+            observer.observe(item);
+        });
+    } else {
+        revealItems.forEach(function (item) {
+            item.classList.add("visible");
+        });
+    }
+
+    if (currentYear) currentYear.textContent = new Date().getFullYear();
+
+    // Close the mobile navigation after a same-page link is selected.
+    document.querySelectorAll("#mainNav a[href^='#']").forEach(function (link) {
+        link.addEventListener("click", function () {
+            const nav = document.getElementById("mainNav");
+            if (nav && nav.classList.contains("show") && window.bootstrap) {
+                bootstrap.Collapse.getOrCreateInstance(nav).hide();
+            }
+        });
+    });
 });
-
-function exploreButton(button) {
-    let standardName = document.getElementById("standardName").textContent;
-    let standardPrice = document.getElementById("standardPrice").textContent;
-    let deluxeName = document.getElementById("deluxeName").textContent;
-    let deluxePrice = document.getElementById("deluxePrice").textContent;
-    let executiveName = document.getElementById("executiveName").textContent;
-    let executivePrice = document.getElementById("executivePrice").textContent;
-
-    if (button.id === "standard") {
-        alert(`Room Type: ${standardName}
-Price: ${standardPrice}`);
-    } else if (button.id === "deluxe") {
-        alert(`Room Type: ${deluxeName}
-Price: ${deluxePrice}`);
-    } else if (button.id === "executive") {
-        alert(`Room Type: ${executiveName}
-Price: ${executivePrice}`);
-    }
-}

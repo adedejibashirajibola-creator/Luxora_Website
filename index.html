@@ -3,389 +3,262 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <meta name="description" content="Experience comfort, elegance and warm hospitality at LUXORA Hotel & Resort.">
+    <title>LUXORA Hotel & Resort | Luxury, Comfort & Memories</title>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>LUXORA Hotel & Resort</title>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-light p-0 fixed-top">
-    <div class="container-fluid">
-        <div class="d-flex flex-column mx-3 lh-1">
-            <a class="navbar-brand fw-bold text-white" href="#">LUXORA</a>
-            <p class="text-white">Home and Resort</p>
-        </div>
+<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="siteNavbar">
+    <div class="container">
+        <a class="navbar-brand brand" href="index.html">
+            <span class="brand-name">LUXORA</span>
+            <span class="brand-tagline">HOTEL &amp; RESORT</span>
+        </a>
 
-        <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav"
+            aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
-                <li class="nav-item"><a class="nav-link active text-white" href="#">Home</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Rooms</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Amenities</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Gallery</a></li>
-                <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+        <div class="collapse navbar-collapse" id="mainNav">
+            <ul class="navbar-nav mx-auto">
+                <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                <li class="nav-item"><a class="nav-link" href="rooms.html">Rooms</a></li>
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#amenities">Amenities</a></li>
+                <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
             </ul>
-
-            <form class="d-flex gap-3 align-items-center book">
-                <a class="text-white text-decoration-none number btn btn-outline-light">+2349122777884</a>
-                <button class="btn" type="submit">
-                    Book Now
-                    <i class="bi bi-arrow-right text-white"></i>
-                </button>
-            </form>
+            <div class="nav-actions">
+                <a class="nav-phone" href="tel:+2349122777884"><i class="bi bi-telephone"></i> +234 912 277 7884</a>
+                <a class="btn btn-gold nav-book" href="#bookingBox">Book Now <i class="bi bi-arrow-up-right"></i></a>
+            </div>
         </div>
     </div>
 </nav>
 
-<main class="main-page">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-6 col-12 p-2">
-                <h6 class="text-white mt-3 comfort">LUXURY • COMFORT • MEMORIES</h6>
-                <h1 class="text-white">Experience Luxury <br>like Never Before</h1>
-                <p class="text-white fs-5">Welcome to the Luxora Hotel & Resort - where modern comfort, world-class service and natural beauty came together to give you an unforgettable stay.</p>
-                <button class="btn bg-warning text-white w-25 fw-bold expand">Book a Room</button>
+<main class="hero" id="home">
+    <div class="hero-overlay"></div>
+    <div class="container hero-container">
+        <div class="hero-content reveal">
+            <p class="eyebrow"><span></span> LUXURY <b>•</b> COMFORT <b>•</b> MEMORIES</p>
+            <h1>Experience Luxury,<br><em>Redefined.</em></h1>
+            <p class="hero-description">Discover exceptional comfort, beautiful surroundings and warm hospitality at LUXORA Hotel &amp; Resort. Your unforgettable experience begins here.</p>
+            <div class="hero-actions">
+                <a href="#bookingBox" class="btn btn-gold btn-lg">Book Your Stay <i class="bi bi-arrow-right"></i></a>
+                <a href="rooms.html" class="btn btn-outline-light btn-lg">Explore Rooms</a>
             </div>
         </div>
+        <a href="#about" class="scroll-cue"><span></span> SCROLL TO DISCOVER</a>
     </div>
 </main>
 
-<section class="booking-section py-5 reveal">
+<section class="booking-wrap" aria-label="Room booking search">
     <div class="container">
-        <form class="booking-box gap-5 text-white p-5 rounded d-sm-block d-lg-flex" id="bookingBox">
-            <div class="booking-field">
-                <label for="checkin" class="fw-bold">Check in</label>
-                <input type="date" id="checkin" class="border-0 bg-white p-2 mt-3 rounded btn">
+        <form class="booking-panel reveal" id="bookingBox">
+            <div class="booking-heading">
+                <span class="eyebrow dark-eyebrow">PLAN YOUR STAY</span>
+                <h2>Find your room</h2>
             </div>
-
             <div class="booking-field">
-                <label for="checkout" class="fw-bold">Check out</label>
-                <input type="date" id="checkout" class="border-0 bg-white p-2 mt-3 rounded btn">
+                <label for="checkin">Check-in</label>
+                <input type="date" id="checkin" name="checkin" required>
             </div>
-
             <div class="booking-field">
-                <label for="travelers" class="fw-bold">Guests</label>
-                <select id="travelers" class="border-0 bg-white p-2 mt-3 rounded btn">
-                    <option>1 Guest</option>
-                    <option>2 Guests</option>
-                    <option>3 Guests</option>
-                    <option>4 Guests</option>
-                    <option>5+ Guests</option>
+                <label for="checkout">Check-out</label>
+                <input type="date" id="checkout" name="checkout" required>
+            </div>
+            <div class="booking-field">
+                <label for="travelers">Guests</label>
+                <select id="travelers" name="travelers">
+                    <option value="1">1 Guest</option>
+                    <option value="2" selected>2 Guests</option>
+                    <option value="3">3 Guests</option>
+                    <option value="4">4 Guests</option>
+                    <option value="5">5+ Guests</option>
                 </select>
             </div>
-
             <div class="booking-field">
-                <label for="roomType" class="fw-bold">Room Type</label>
-                <select id="roomType" class="border-0 bg-white p-2 mt-3 rounded btn">
-                    <option>Standard Room</option>
-                    <option>Deluxe Room</option>
-                    <option>Executive Suite</option>
+                <label for="roomType">Room type</label>
+                <select id="roomType" name="roomType">
+                    <option value="standard">Standard Room</option>
+                    <option value="deluxe">Deluxe Room</option>
+                    <option value="executive">Executive Suite</option>
                 </select>
             </div>
-
-            <button type="submit" class="search-btn border-0 bg-white p-0 mt-3 rounded btn w-25">
-                <i class="bi bi-search"></i>
-                Search Rooms
-            </button>
+            <button type="submit" class="btn btn-gold search-button">Search Rooms <i class="bi bi-arrow-right"></i></button>
+            <p class="booking-message" id="bookingMessage" role="status" aria-live="polite"></p>
         </form>
     </div>
 </section>
 
-<section class="about mb-3">
+<section class="section about-section" id="about">
     <div class="container">
-        <div class="row align-items-center">
-            <div class="col-12 col-md-6">
-                <img src="images/restaurant-hall-with-leather-armchairs-french-windows.jpg" alt="Hotel Image" class="img-fluid">
-            </div>
-
-            <div class="col-12 col-md-6">
-                <div>
-                    <h6 class="fw-bold aria">ABOUT LUXORA</h6>
-                    <h1 class="fw-bold">A Home Away From Home</h1>
-                    <p class="news">LUXORA Hotel & Resort is a premium hospitality destination designed for comfort, relaxation and elegance. Whether you are here for business, leisure or a special occasion, we ensure your stay is nothing short of extraordinary.</p>
-
-                    <div class="d-flex gap-4 mt-4 flex-wrap">
-                        <div class="d-flex gap-3">
-                            <i class="bi bi-house fs-1 text-dark"></i>
-                            <div>
-                                <strong class="fw-bold fs-4">50+</strong>
-                                <p>Luxurious Rooms</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex gap-3">
-                            <i class="bi bi-people fs-1 text-dark"></i>
-                            <div>
-                                <strong class="fw-bold fs-4">10+</strong>
-                                <p>Years of Excellence</p>
-                            </div>
-                        </div>
-
-                        <div class="d-flex gap-3">
-                            <i class="bi bi-star-fill fs-1 text-dark"></i>
-                            <div>
-                                <strong class="fw-bold fs-4">1000+</strong>
-                                <p>Happy Guests</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <button type="button" class="btn text-white learn mt-3">
-                        <i class="bi bi-arrow-right"></i>
-                        Learn more
-                    </button>
+        <div class="row align-items-center g-5">
+            <div class="col-lg-6 reveal">
+                <div class="about-photo-wrap">
+                    <img src="images/restaurant-hall-with-leather-armchairs-french-windows.jpg" alt="Elegant LUXORA hotel lounge" class="about-photo">
+                    <div class="photo-note"><strong>Feel at home.</strong><span>Enjoy every moment.</span></div>
                 </div>
+            </div>
+            <div class="col-lg-6 reveal">
+                <p class="eyebrow section-eyebrow">ABOUT LUXORA</p>
+                <h2 class="section-title">A home away<br>from <em>home.</em></h2>
+                <p class="section-copy">LUXORA Hotel &amp; Resort is a welcoming hospitality destination designed for comfort, relaxation and elegance. Whether you are here for business, leisure or a special occasion, we want your stay to feel memorable from the moment you arrive.</p>
+                <div class="stats-row">
+                    <div><strong>50<span>+</span></strong><small>Rooms &amp; suites</small></div>
+                    <div><strong>10<span>+</span></strong><small>Years of service</small></div>
+                    <div><strong>1k<span>+</span></strong><small>Guest visits</small></div>
+                </div>
+                <a href="about.html" class="text-link">Discover our story <i class="bi bi-arrow-up-right"></i></a>
             </div>
         </div>
     </div>
 </section>
 
-<section class="view mt-5 mb-5">
+<section class="section rooms-section" id="rooms">
     <div class="container">
+        <div class="section-heading-row reveal">
+            <div>
+                <p class="eyebrow section-eyebrow">STAY YOUR WAY</p>
+                <h2 class="section-title">Rooms &amp; <em>suites.</em></h2>
+            </div>
+            <div class="section-heading-side">
+                <p>Thoughtfully designed spaces, modern comforts and room to relax. Find the stay that suits you.</p>
+                <a href="rooms.html" class="text-link">View all rooms <i class="bi bi-arrow-up-right"></i></a>
+            </div>
+        </div>
+
         <div class="row g-4">
-            <div class="col-12 col-md-3">
-                <div class="h-100">
-                    <h6>Standard Rooms</h6>
-                    <h1>Rooms & Suites</h1>
-                    <p>Our rooms are designed with your comfort in mind, featuring modern amenities, elegant decor and breathtaking views.</p>
-                    <button type="button" class="btn w-100 rounded-pill bg-warning expand text-white">
-                        View All Rooms
-                        <i class="bi bi-arrow-right"></i>
-                    </button>
-                </div>
-            </div>
-
-            <div class="col-12 col-md-3 col-6">
-                <div class="card h-100 bg-white">
-                    <img src="images/starry-sky-town.jpg" class="card-img-top" alt="Standard Room" loading="lazy">
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold" id="standardName">Standard Room</h6>
-                        <h5 class="card-text" id="standardPrice"><strong>₦35,000</strong> /night</h5>
-
-                        <div class="d-flex flex-column">
-                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
-                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i> Free Wi-Fi</div>
-                            <div class="mb-3"><i class="bi bi-snow text-dark"></i> Air conditioning</div>
-                        </div>
-
-                        <button class="btn w-100 text-white learn" id="standard" onclick="exploreButton(this)">Explore</button>
+            <div class="col-md-6 col-lg-4 reveal">
+                <article class="room-card">
+                    <div class="room-image"><img src="images/starry-sky-town.jpg" alt="Standard room at LUXORA" loading="lazy"><span class="room-tag">COMFORT</span></div>
+                    <div class="room-card-body">
+                        <div class="room-title-row"><h3>Standard Room</h3><p><strong>₦35,000</strong><small>/ night</small></p></div>
+                        <div class="room-features"><span><i class="bi bi-bed"></i> King bed</span><span><i class="bi bi-wifi"></i> Wi-Fi</span><span><i class="bi bi-snow"></i> A/C</span></div>
+                        <p class="room-description">A cosy, stylish retreat with the essentials for a comfortable stay.</p>
+                        <a href="rooms.html" class="room-link">Explore room <i class="bi bi-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
-
-            <div class="col-12 col-md-3 col-6">
-                <div class="card h-100 bg-white shadow-lg">
-                    <img src="images/deluxe.jpg" class="card-img-top" alt="Deluxe Room" loading="lazy">
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold" id="deluxeName">Deluxe Room</h6>
-                        <h5 class="card-text" id="deluxePrice"><strong>₦50,000</strong> /night</h5>
-
-                        <div class="d-flex flex-column">
-                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
-                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i> Free Wi-Fi</div>
-                            <div class="mb-3"><i class="bi bi-binoculars-fill text-dark"></i> Balcony View</div>
-                        </div>
-
-                        <button class="btn w-100 text-white learn" id="deluxe" onclick="exploreButton(this)">Explore</button>
+            <div class="col-md-6 col-lg-4 reveal">
+                <article class="room-card featured-room">
+                    <div class="room-image"><img src="images/deluxe.jpg" alt="Deluxe room at LUXORA" loading="lazy"><span class="room-tag">MOST POPULAR</span></div>
+                    <div class="room-card-body">
+                        <div class="room-title-row"><h3>Deluxe Room</h3><p><strong>₦50,000</strong><small>/ night</small></p></div>
+                        <div class="room-features"><span><i class="bi bi-bed"></i> King bed</span><span><i class="bi bi-wifi"></i> Wi-Fi</span><span><i class="bi bi-binoculars"></i> View</span></div>
+                        <p class="room-description">More space and thoughtful details for a little extra comfort.</p>
+                        <a href="rooms.html" class="room-link">Explore room <i class="bi bi-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
-
-            <div class="col-12 col-md-3 col-6">
-                <div class="card h-100 bg-white">
-                    <img src="images/executive.jpg" class="card-img-top" alt="Executive Suite" loading="lazy">
-                    <div class="card-body">
-                        <h6 class="card-title fw-bold" id="executiveName">Executive Suite</h6>
-                        <h5 class="card-text" id="executivePrice"><strong>₦80,000</strong> /night</h5>
-
-                        <div class="d-flex flex-column">
-                            <div class="mb-3"><i class="bi bi-bed-fill text-dark"></i> 1 King Bed</div>
-                            <div class="mb-3"><i class="bi bi-wifi text-dark"></i> Free Wi-Fi</div>
-                            <div class="mb-3"><i class="bi bi-house-door-fill text-dark"></i> Living Area</div>
-                        </div>
-
-                        <button class="btn w-100 text-white learn" id="executive" onclick="exploreButton(this)">Explore</button>
+            <div class="col-md-6 col-lg-4 reveal">
+                <article class="room-card">
+                    <div class="room-image"><img src="images/executive.jpg" alt="Executive suite at LUXORA" loading="lazy"><span class="room-tag">EXTRA SPACE</span></div>
+                    <div class="room-card-body">
+                        <div class="room-title-row"><h3>Executive Suite</h3><p><strong>₦80,000</strong><small>/ night</small></p></div>
+                        <div class="room-features"><span><i class="bi bi-house"></i> Living area</span><span><i class="bi bi-wifi"></i> Wi-Fi</span><span><i class="bi bi-stars"></i> Premium</span></div>
+                        <p class="room-description">A spacious suite designed for guests who appreciate room to unwind.</p>
+                        <a href="rooms.html" class="room-link">Explore room <i class="bi bi-arrow-right"></i></a>
                     </div>
-                </div>
+                </article>
             </div>
         </div>
     </div>
 </section>
 
-<section class="amenities mt-5 mb-5 py-5 text-white">
+<section class="amenities-section section" id="amenities">
     <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-12 col-md-3">
-                <h6>Our Amenities</h6>
-                <h1>World-Class Facilities</h1>
-                <p>Our amenities are designed to make your stay more comfortable, relaxing and enjoyable.</p>
-                <button type="button" class="btn w-100 rounded-pill bg-warning text-white expand">
-                    Explore All Amenities
-                    <i class="bi bi-arrow-right"></i>
-                </button>
-            </div>
-
-            <div class="col-6 col-md-2">
-                <div class="small-cards text-center">
-                    <i class="bi bi-water text-white fs-1 circle"></i>
-                    <h6 class="pt-3">Swimming Pool</h6>
-                    <p>Relax & Refresh</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-2">
-                <div class="small-cards text-center">
-                    <i class="bi bi-cup-hot text-white fs-1 circle"></i>
-                    <h6 class="pt-3">Restaurant</h6>
-                    <p>Delicious Meals</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-2">
-                <div class="small-cards text-center">
-                    <i class="bi bi-heart-pulse text-white fs-1 circle"></i>
-                    <h6 class="pt-3">Gym Fitness</h6>
-                    <p>Stay Healthy</p>
-                </div>
-            </div>
-
-            <div class="col-6 col-md-2">
-                <div class="small-cards text-center">
-                    <i class="bi bi-shield-check text-white fs-1 circle"></i>
-                    <h6 class="pt-3">24/7 Security</h6>
-                    <p>Your Safety</p>
-                </div>
-            </div>
+        <div class="amenities-intro reveal">
+            <p class="eyebrow">THE LUXORA EXPERIENCE</p>
+            <h2 class="section-title light-title">Everything you need<br>for a <em>better stay.</em></h2>
+            <p>From moments of relaxation to the little details that make travel easier, enjoy facilities designed around you.</p>
+            <a href="amenities.html" class="btn btn-outline-light">Explore amenities <i class="bi bi-arrow-up-right"></i></a>
+        </div>
+        <div class="amenity-grid">
+            <article class="amenity-card reveal"><span class="amenity-icon"><i class="bi bi-water"></i></span><h3>Swimming Pool</h3><p>Take a refreshing break and enjoy a relaxed atmosphere.</p></article>
+            <article class="amenity-card reveal"><span class="amenity-icon"><i class="bi bi-cup-hot"></i></span><h3>Restaurant</h3><p>Enjoy delicious meals and welcoming dining spaces.</p></article>
+            <article class="amenity-card reveal"><span class="amenity-icon"><i class="bi bi-heart-pulse"></i></span><h3>Gym &amp; Fitness</h3><p>Make room for movement during your stay.</p></article>
+            <article class="amenity-card reveal"><span class="amenity-icon"><i class="bi bi-shield-check"></i></span><h3>24/7 Security</h3><p>Feel reassured with security throughout your visit.</p></article>
         </div>
     </div>
 </section>
 
-<section class="mb-5 mt-5">
+<section class="section gallery-section" id="gallery">
     <div class="container">
-        <div class="row g-4 align-items-center">
-            <div class="col-12 col-md-3">
-                <h6>Our Gallery</h6>
-                <h3>Captured Moments</h3>
-                <p>Take a look at some of the amazing moments from our hotel and resort.</p>
-                <button type="button" class="btn w-75 rounded-pill bg-warning text-white expand">
-                    View Gallery
-                    <i class="bi bi-arrow-right"></i>
-                </button>
-            </div>
-
-            <div class="col-12 col-md-3">
-    <div class="card shadow-sm h-100">
-        <div class="d-flex align-items-center gap-3 p-3">
-            <img src="images/patrick-collison-headshot.jpg" class="testimonial-img" alt="Joe Wilson">
-            <div>
-                <h5 class="card-title mb-1">Joe Wilson</h5>
-                <small class="text-muted">Hotel Guest</small>
-            </div>
+        <div class="section-heading-row reveal">
+            <div><p class="eyebrow section-eyebrow">A CLOSER LOOK</p><h2 class="section-title">Moments at <em>LUXORA.</em></h2></div>
+            <div class="section-heading-side"><p>Take a glimpse at the spaces and details that make your stay special.</p><a href="gallery.html" class="text-link">View gallery <i class="bi bi-arrow-up-right"></i></a></div>
         </div>
-
-        <div class="card-body pt-0">
-            <p class="card-text">LUXORA gave us a wonderful experience. The service was excellent and the room was beautiful.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col-12 col-md-3">
-    <div class="card shadow-sm h-100">
-        <div class="d-flex align-items-center gap-3 p-3">
-            <img src="images/michael-siebel-headshot.jpeg" class="testimonial-img" alt="Michael Smith">
-            <div>
-                <h5 class="card-title mb-1">Michael Smith</h5>
-                <small class="text-muted">Hotel Guest</small>
-            </div>
-        </div>
-
-        <div class="card-body pt-0">
-            <p class="card-text">The atmosphere was peaceful, comfortable and perfect for a relaxing stay.</p>
-        </div>
-    </div>
-</div>
-
-<div class="col-12 col-md-3">
-    <div class="card shadow-sm h-100">
-        <div class="d-flex align-items-center gap-3 p-3">
-            <img src="images/otto-williams.jpeg" class="testimonial-img" alt="David Williams">
-            <div>
-                <h5 class="card-title mb-1">David Williams</h5>
-                <small class="text-muted">Hotel Guest</small>
-            </div>
-        </div>
-
-        <div class="card-body pt-0">
-            <p class="card-text">Everything from the rooms to the hospitality made our stay memorable.</p>
-        </div>
-    </div>
-</div>
-
+        <div class="gallery-grid">
+            <a href="gallery.html" class="gallery-item gallery-large reveal"><img src="images/restaurant-hall-with-leather-armchairs-french-windows.jpg" alt="LUXORA restaurant and lounge" loading="lazy"><span>Dining &amp; lounge</span></a>
+            <a href="gallery.html" class="gallery-item reveal"><img src="images/deluxe.jpg" alt="Deluxe room interior" loading="lazy"><span>Deluxe comfort</span></a>
+            <a href="gallery.html" class="gallery-item reveal"><img src="images/executive.jpg" alt="Executive suite interior" loading="lazy"><span>Executive living</span></a>
+            <a href="gallery.html" class="gallery-item reveal"><img src="images/beautiful world.jpg" alt="Beautiful surroundings" loading="lazy"><span>Beautiful surroundings</span></a>
         </div>
     </div>
 </section>
 
-<section class="ready mt-5 mb-5 pt-5 py-5">
+<section class="section testimonials-section">
     <div class="container">
-        <div class="row">
-            <div class="col-12 col-md-6">
-                <h6 class="text-warning">READY FOR AN UNFORGETTABLE START</h6>
-                <h1 class="text-white">Book Your Stay Today</h1>
-                <p class="text-white">Experience the best of luxury, comfort and hospitality at Luxora Hotel & Resort.</p>
-            </div>
+        <div class="text-center reveal">
+            <p class="eyebrow section-eyebrow">GUEST EXPERIENCES</p>
+            <h2 class="section-title">Kind words from<br><em>our guests.</em></h2>
         </div>
+        <div class="row g-4 mt-3">
+            <div class="col-md-4 reveal"><article class="testimonial-card"><div class="stars">★★★★★</div><p>“A peaceful atmosphere and a comfortable space to relax. The team made the experience welcoming.”</p><div class="guest"><img src="images/patrick-collison-headshot.jpg" alt="" loading="lazy"><div><strong>Guest review</strong><small>LUXORA visitor</small></div></div></article></div>
+            <div class="col-md-4 reveal"><article class="testimonial-card"><div class="stars">★★★★★</div><p>“The room was beautiful and the hospitality made the stay feel special. I would gladly visit again.”</p><div class="guest"><img src="images/michael-siebel-headshot.jpeg" alt="" loading="lazy"><div><strong>Guest review</strong><small>LUXORA visitor</small></div></div></article></div>
+            <div class="col-md-4 reveal"><article class="testimonial-card"><div class="stars">★★★★★</div><p>“A lovely place to unwind, with thoughtful touches and a relaxing environment.”</p><div class="guest"><img src="images/otto-williams.jpeg" alt="" loading="lazy"><div><strong>Guest review</strong><small>LUXORA visitor</small></div></div></article></div>
+        </div>
+        <p class="testimonial-note">Sample testimonials and profile images are placeholders. Replace them with genuine guest reviews and approved photographs before publishing.</p>
     </div>
 </section>
 
-<footer class="footer">
+<section class="final-cta">
+    <div class="cta-overlay"></div>
+    <div class="container cta-content reveal">
+        <p class="eyebrow">YOUR NEXT STAY STARTS HERE</p>
+        <h2>Make room for<br><em>something memorable.</em></h2>
+        <p>Enjoy comfort, thoughtful hospitality and a stay worth remembering.</p>
+        <a href="#bookingBox" class="btn btn-gold btn-lg">Reserve Your Stay <i class="bi bi-arrow-right"></i></a>
+    </div>
+</section>
+
+<footer class="site-footer" id="contact">
     <div class="container">
-        <div class="row g-4">
-            <div class="col-12 col-md-3">
-                <h1>LUXORA</h1>
-                <h5>Hotel & Resort</h5>
+        <div class="row g-5">
+            <div class="col-lg-4">
+                <a class="footer-brand" href="#home">LUXORA</a>
+                <p class="footer-tagline">HOTEL &amp; RESORT</p>
+                <p class="footer-about">A welcoming destination for comfort, relaxation and memorable experiences.</p>
             </div>
-
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Quick Links</h6>
-                <ul class="p-0">
-                    <li><a href="#" class="text-decoration-none text-muted">Home</a></li>
-                    <li><a href="#" class="text-decoration-none text-muted">Rooms</a></li>
-                    <li><a href="#" class="text-decoration-none text-muted">About</a></li>
-                </ul>
+            <div class="col-6 col-lg-2">
+                <h3>Explore</h3>
+                <a href="#home">Home</a><a href="rooms.html">Rooms</a><a href="#about">About us</a><a href="#amenities">Amenities</a>
             </div>
-
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Explore</h6>
-                <ul class="p-0">
-                    <li><a href="#" class="text-decoration-none text-muted">Amenities</a></li>
-                    <li><a href="#" class="text-decoration-none text-muted">Gallery</a></li>
-                    <li><a href="#" class="text-decoration-none text-muted">Contact</a></li>
-                </ul>
+            <div class="col-6 col-lg-2">
+                <h3>Discover</h3>
+                <a href="#gallery">Gallery</a><a href="contact.html">Contact</a><a href="#bookingBox">Reservations</a>
             </div>
-
-            <div class="col-12 col-md-3">
-                <h6 class="fw-bold">Contact</h6>
-                <ul class="p-0">
-                    <li class="text-muted">+2349122777884</li>
-                    <li class="text-muted">LUXORA Hotel & Resort</li>
-                    <li class="text-muted">Nigeria</li>
-                </ul>
+            <div class="col-lg-4">
+                <h3>Get in touch</h3>
+                <a href="tel:+2349122777884"><i class="bi bi-telephone"></i> +234 912 277 7884</a>
+                <p><i class="bi bi-geo-alt"></i> Nigeria</p>
+                <div class="social-links"><a href="#" aria-label="Instagram"><i class="bi bi-instagram"></i></a><a href="#" aria-label="Facebook"><i class="bi bi-facebook"></i></a><a href="#" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a></div>
             </div>
         </div>
+        <div class="footer-bottom"><span>© <span id="currentYear"></span> LUXORA Hotel &amp; Resort. All rights reserved.</span><a href="#home">Back to top ↑</a></div>
     </div>
 </footer>
 
-<script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-
+<script src="script.js"></script>
 </body>
 </html>
